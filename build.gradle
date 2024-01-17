@@ -1,16 +1,16 @@
 plugins {
     id 'java'
-//    id "io.freefair.lombok" version "5.3.0"
-//    id 'io.qameta.allure' version '2.8.1'
+    id "io.freefair.lombok" version "5.3.0"
+    id 'io.qameta.allure' version '2.9.6'
 }
 
-//allure {
-//    autoconfigure = true
-//    version = '2.13.6'
-//    useJUnit5 {
-//        version = '2.13.6'
-//    }
-//}
+allure {
+    version = '2.16.1'
+
+    useJUnit5 {
+        version = '2.16.1'
+    }
+}
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -30,10 +30,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
     testImplementation 'com.codeborne:selenide:5.14.2'
     testImplementation 'com.google.code.gson:gson:2.8.6'
-//    testImplementation 'io.qameta.allure:allure-selenide:2.13.6'
-//    testImplementation 'mysql:mysql-connector-java:8.0.19'
-//    testImplementation 'org.postgresql:postgresql:42.2.14'
-//    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'io.qameta.allure:allure-selenide:2.13.6'
+    testImplementation 'mysql:mysql-connector-java:8.0.19'
+    testImplementation 'org.postgresql:postgresql:42.2.14'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
 }
 
 test {
@@ -42,4 +42,5 @@ test {
     systemProperty 'db.url', System.getProperty('db.url')
     systemProperty 'db.user', System.getProperty('db.user', 'app')
     systemProperty 'db.password', System.getProperty('db.password', 'pass')
+    systemProperty 'sut.url', System.getProperty('sut.url',"http://localhost:8080")
 }
