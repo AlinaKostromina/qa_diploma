@@ -25,15 +25,20 @@ public class CreditTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
+    @BeforeAll
+    public static void teardrop() {
+        cleanDataBase();
+    }
+
     @AfterAll
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
-
-    @AfterEach
-    public void teardrop() {
-        cleanDataBase();
-    }
+//
+//    @AfterEach
+//    public void teardrop() {
+//        cleanDataBase();
+//    }
 
     //Отправка POST-запроса с валидными данными и номером карты со статусом "APPROVED".
     @Test
