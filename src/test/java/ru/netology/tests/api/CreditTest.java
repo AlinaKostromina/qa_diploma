@@ -31,11 +31,6 @@ public class CreditTest {
     static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
-//
-//    @AfterEach
-//    public void teardrop() {
-//        cleanDataBase();
-//    }
 
     //Отправка POST-запроса с валидными данными и номером карты со статусом "APPROVED".
     @Test
