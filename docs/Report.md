@@ -24,6 +24,7 @@ ___
 #### Сформированы 2 вида отчётов:
 * [Gradle отчёт](https://github.com/AlinaKostromina/qa_diploma/issues/35)
 * [AllureReport отчёт]()
+___
 
 ### Общие рекомендации
 * Исправить баги, которые заведены в [Issues](https://github.com/AlinaKostromina/qa_diploma/issues);
