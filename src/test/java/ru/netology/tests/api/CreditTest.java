@@ -4,13 +4,10 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import com.google.gson.Gson;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
+import org.junit.jupiter.api.*;
 import ru.netology.data.ApiHelper;
 import ru.netology.data.DataBaseHelper;
 import ru.netology.data.DataHelper;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
 import static ru.netology.data.DataBaseHelper.cleanDataBase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,8 +22,8 @@ public class CreditTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-    @BeforeAll
-    public static void teardrop() {
+    @BeforeEach
+    public void teardrop() {
         cleanDataBase();
     }
 

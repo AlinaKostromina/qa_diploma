@@ -4,13 +4,10 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import com.google.gson.Gson;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.val;
+import org.junit.jupiter.api.*;
 import ru.netology.data.ApiHelper;
 import ru.netology.data.DataBaseHelper;
 import ru.netology.data.DataHelper;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
 import static ru.netology.data.DataBaseHelper.cleanDataBase;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,16 +22,16 @@ public class PaymentTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-    @AfterAll
-    static void tearDownAll() {
-        SelenideLogger.removeListener("allure");
-    }
-
-    @AfterEach
+    @BeforeEach
     public void teardrop() {
         cleanDataBase();
     }
 
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
+    
     //Отправка POST-запроса с валидными данными и номером карты со статусом "APPROVED".
     @Test
     void shouldRespondWithStatusCode200WithApprovedCard() {
