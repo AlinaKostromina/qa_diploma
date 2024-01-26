@@ -3,8 +3,8 @@ ___
 
 ### Документация:
 [План по автоматизации тестирования](https://github.com/AlinaKostromina/qa_diploma/blob/main/docs/Plan.md)  
-[Отчет по итогам тестирования]   
-[Отчет по итогам автоматизации]    
+[Отчет по итогам тестирования](https://github.com/AlinaKostromina/qa_diploma/blob/main/docs/Report.md)     
+[Отчет по итогам автоматизации](https://github.com/AlinaKostromina/qa_diploma/blob/main/docs/Summary.md)    
 
 ---
 ### О проекте:
